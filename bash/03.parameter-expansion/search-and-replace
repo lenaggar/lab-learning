@@ -1,0 +1,8 @@
+#!/bin/bash
+
+text="hello world world"
+
+echo "${text/world/bash}"  # hello bash world (replace first match)
+echo "${text//world/bash}"  # hello bash bash (replace all matches)
+echo "${text// /}"  # helloworldworld (replace spaces with nothing - delete!)
+

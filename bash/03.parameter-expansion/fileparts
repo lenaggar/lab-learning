@@ -1,0 +1,14 @@
+#!/bin/bash
+
+filepath="/home/user/report.tar.gz"
+
+filename="${filepath##*/}"   # report.tar.gz
+directory="${filepath%/*}"   # /home/user (dirname)
+extension="${filename##*.}"  # gz
+basename="${filename%%.*}"   # report
+
+echo "File name:      ${filename}"
+echo "File directory: ${directory}"
+echo "File extension: ${extension}"
+echo "File basename:  ${basename}"
+

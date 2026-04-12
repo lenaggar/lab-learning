@@ -1,0 +1,13 @@
+#!/bin/bash
+
+
+# (:-) use default value if variable is empty or unset
+name=""
+echo "Hello, ${name:-User}"  # Hello, User
+echo "${name}"               #
+
+# (:=) set value if variable is empty or unset
+name=""
+echo "Hello, ${name:=User}"  # Hello, User
+echo "${name}"               # User
+

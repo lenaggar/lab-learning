@@ -1,0 +1,4 @@
+#!/bin/bash
+
+echo "${PATH//:/$'\n'}"  # colons to new lines (no external subprocess needed)
+

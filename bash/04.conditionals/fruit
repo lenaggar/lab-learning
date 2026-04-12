@@ -1,0 +1,26 @@
+#!/bin/bash
+
+if [[ ${#} -lt 1 ]]; then
+	echo "Must provide at least one fruit argument"
+	exit 1
+fi
+
+case ${1} in
+	apple)
+		echo "Apples are red"
+		;;
+	banana)
+		echo "Bananas are yellow"
+		;;
+	orange)
+		echo "Oranges are orange"
+		;;
+	kiwi)
+		echo "Kiwis are brown from outside (green from inside)"
+		;;
+	*)
+		echo "I don't know what color is this fruit!"
+		exit 1
+		;;
+esac
+
