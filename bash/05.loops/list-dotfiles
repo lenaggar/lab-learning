@@ -1,0 +1,9 @@
+#!/bin/bash
+
+for file in ~/dotfiles/*; do
+	[[ -f "${file}" ]] || continue 
+	[[ "${file##*/}" == "setup" ]] && continue
+	# skip the setup file, that's not configuration
+	echo "Found config file: ${file}"
+done
+

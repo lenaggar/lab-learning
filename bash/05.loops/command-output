@@ -1,0 +1,10 @@
+#!/bin/bash
+
+for file in $(ls); do  # WRONG - fails with spaces in filenames
+    echo "$file"
+done
+
+for file in *; do  # CORRECT - handles spaces correctly
+    echo "$file"
+done
+
