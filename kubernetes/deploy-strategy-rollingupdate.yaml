@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: mahmoud
+  name: mahmoud
+spec:
+  replicas: 10
+  selector:
+    matchLabels:
+      app: mahmoud
+  template:
+    metadata:
+      labels:
+        app: mahmoud
+    spec:
+      containers:
+        - image: httpd:alpine3.18
+          name: httpd
+          command: ["/bin/bash", "-c"] # override the default command
+          args: ["sleep 5; exit 1"] # sleep got 5 seconds then exit with an error
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1
+
