@@ -1,0 +1,6 @@
+persistence:
+  homarrDatabase:
+    enabled: true
+    storageClassName: "local-path"
+    accessMode: "ReadWriteOnce"
+
